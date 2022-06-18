@@ -56,6 +56,7 @@ session_start();
 $csrf = new Token;
 $token = $csrf->generate_token();
 $_SESSION['token'] = $token;
-echo $csrf->eval_token('dfdfghr65757rtjfgng');   // hacking is processed here
-
+ // a non token validation allowed to hacker manipulate the token , 
+ // processing bad information like increase amounts and changing page destination
+ echo $csrf->eval_token('dfdfghr65757rtjfgng');  
 ?>
