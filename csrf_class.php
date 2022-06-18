@@ -16,7 +16,7 @@ abstract class CSRF {
 
 
 class Token extends CSRF{
-    protected string $tooken;
+ 
 
     public function generate_token() : string{
        return bin2hex(random_bytes(35));
